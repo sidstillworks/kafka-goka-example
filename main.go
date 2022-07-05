@@ -75,7 +75,7 @@ func runEmitter() {
 		var u user
 		u.LatestTime = time.Now().String()
 		u.TotalValue = int64(i % 10)
-		key := fmt.Sprintf("%d", i%5)
+		key := fmt.Sprintf("%d", i%6)
 		emitter, err := goka.NewEmitter(brokers, topic, new(userCodec))
 		if err != nil {
 			panic(err)
